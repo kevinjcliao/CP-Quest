@@ -7,7 +7,7 @@ def main():
     print("Hi " + player.user_name+  ", shall we play a game?")
     newGame = game.Game(player.user_name)
     newGame.run()
-    print "I get this far"
+    print "Game Over! "
 
 
 if __name__ =="__main__":  
