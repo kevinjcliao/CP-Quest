@@ -65,7 +65,7 @@ class chamber_six:
 
 
                 elif i==1: 
-                    self.theCurrentGame.aura -= 1
+                    self.theCurrentGame.aura += 1
                     self.gamePlayer.sanity   += 1
                     self.theCurrentGame.slowPrint(
                             "You decide to hold a movie night in order" +\
@@ -81,14 +81,24 @@ class chamber_six:
                         )
 
                 elif i==2: 
-                    self.theCurrentGame.aura -= 1
+                    self.theCurrentGame.aura += 1
                     self.gamePlayer.sanity   += 1
-                    self.theCurrentGame.slowPrint("Some Answer")
+                    self.theCurrentGame.slowPrint(
+                            "Rather than ignore your responsibilities" +\
+                            " you choose to tell each freshman individually" +\
+                            " that you are here as a support person if" +\
+                            " necessary. Some time passes, and you are" +\
+                            " called upon to mediate conversations every" +\
+                            " now and then, but the situation begins to" +\
+                            " improve."
+                        )
 
                 elif i==3: 
                     self.theCurrentGame.aura -= 1
                     self.gamePlayer.sanity   += 1
-                    self.theCurrentGame.slowPrint("Some Answer")
+                    self.theCurrentGame.slowPrint("Unbelievable. You're"+\
+                            " no longer the CP of this hall.")
+                    sys.exit()
                 
                 break
   
