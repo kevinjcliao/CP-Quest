@@ -13,8 +13,8 @@ class chamber_two:
                 " you to stop?", 
             "1: Perhaps ask some of their friends to see" +\
                 " if they're alright. ",
-            "2: Go out to eat with them"+\
-                "give them a space for them to open up.",
+            "2: Go out to eat with them and"+\
+                " give them a space for them to open up.",
             "3: Hold a PAF session and leave it to them to solve."
             ]
         self.printQuestion(self.acceptable_inputs)

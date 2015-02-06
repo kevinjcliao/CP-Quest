@@ -19,16 +19,16 @@ class chamber_four:
         self.getUserInput(self.acceptable_inputs)
 
     def printQuestion(self, acceptable_inputs): 
+        self.theCurrentGame.slowPrint("Episode 3: Mid-November")
         self.theCurrentGame.slowPrint(
             "The workload is really picking up,"+\
-            "and the courses are getting really difficult."+\
-            "Your customs group is located down the hall from another,"+\
-            "and every night they play very loud music"+\
-            "that makes it impossible to study anywhere on the hall."+\
-            "While you have grown used to the noise,"+\
-            "some freshmen express their irritance to you."+\
-            "What do you do? ")
-        self.theCurrentGame.slowPrint("!")
+            " and the courses are getting really difficult."+\
+            " Your customs group is located down the hall from another,"+\
+            " and every night they play very loud music"+\
+            " that makes it impossible to study anywhere on the hall."+\
+            " While you have grown used to the noise,"+\
+            " some freshmen express their irritance to you."+\
+            " What do you do? ")
         self.printAcceptableInputs(acceptable_inputs)
 
     def printAcceptableInputs(self, acceptable_inputs): 

@@ -9,25 +9,26 @@ class chamber_five:
         self.gamePlayer = currentPlayer
         self.theCurrentGame = currentGame
         self.acceptable_inputs = [
-            "0:Implement martial law. Set a curfew"+\
+            "0: Implement martial law. Set a curfew"+\
                 "and confine people to their rooms to study.",
-            "1: Pressure people to study, and remind them that"+\
-                "finals are coming, but they can drink and"+\
+            "1: Remind people to study, and remind them that"+\
+                " finals are coming, but they can drink and"+\
                     "party all though winter break.",
             "2: Do nothing. You have your own finals to worry about.",
             "3: Join them. Drinking is cool,"+\
-                "therefore you drinking with them must make you cool."
+                " therefore you drinking with them must make you cool."
             ]
         self.printQuestion(self.acceptable_inputs)
         self.getUserInput(self.acceptable_inputs)
 
     def printQuestion(self, acceptable_inputs): 
+        self.theCurrentGame.slowPrint("Episode 4: Finals week")
         self.theCurrentGame.slowPrint(
             "Finals are right around the corner,"+\
-            "but you begin to notice that your freshmen"+\
-            "have not been studying. Instead all they do is party,"+\
-            "and they have stopped doing homework in general."+\
-            "What do you do? ")
+            " but you begin to notice that your freshmen"+\
+            " have not been studying. Instead all they do is party,"+\
+            " and they have stopped doing homework in general."+\
+            " What do you do? ")
 
         self.printAcceptableInputs(acceptable_inputs)
         
