@@ -1,22 +1,26 @@
 import random
 import sys
 import time
-import chambers/chamber_one
+
+sys.path.append('chambers/')
+import chamber_one
+import chamber_two
 
 class Game: 
-    def __init__(self, gamePlayerName): 
-        print "New game created! " + "Hi, " + gamePlayerName
-    
-    def newGame (self): 
-        chamber_one = 
-        
-        self.slowPrint(
+    def __init__(self, player): 
+        print "New game created! " + "Hi, " + player.user_name 
+        self.gamePlayer = player
+    def run(self): 
+        self.slowPrint("Let's get started...")
+        current_chamber = chamber_one.chamber_one(self, self.gamePlayer)
+        current_chamber = chamber_two.chamber_two(self, self.gamePlayer)
+
     def slowPrint(self, s): 
         for c in s + '\n': 
             sys.stdout.write(c)
             sys.stdout.flush()
-            time.sleep(0.01)
+            time.sleep(0.05)
 
-    def printAcceptableInputs(self, acceptableInputs): 
-        self.slowPrint("Current acceptable inputs: ")
+    def printAcceptableInputs(acceptableInputs): 
+        slowPrint("Current acceptable inputs: ")
         print acceptableInputs
