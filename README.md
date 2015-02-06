@@ -7,3 +7,6 @@ Haverford College is unique in the way that we approach freshman orientation. Ra
 
 ## About CPQuest: 
 This application is written in Python. It is object oriented from the ground up. Different responses are available to the user based on the previous choices that they make. 
+
+It's also ready for the interview. 
+
