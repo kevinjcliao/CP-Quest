@@ -5,6 +5,11 @@ import time
 sys.path.append('chambers/')
 import chamber_one
 import chamber_two
+import chamber_three
+import chamber_four
+import chamber_five
+import chamber_six
+
 
 class Game: 
     def __init__(self, player): 
@@ -19,13 +24,13 @@ class Game:
         current_chamber = chamber_one.chamber_one(self, self.gamePlayer)
         current_chamber = chamber_two.chamber_two(self, self.gamePlayer)
         self.inBetweenChambers()
-
+        current_chamber = chamber_three.chamber_three(self, self.gamePlayer)
 
     def slowPrint(self, s): 
         for c in s + '\n': 
             sys.stdout.write(c)
             sys.stdout.flush()
-            time.sleep(0.05)
+            time.sleep(0.0005)
         print ""
 
     def printAcceptableInputs(acceptableInputs): 
