@@ -1,3 +1,5 @@
+
+# -*- coding: utf-8 -*-
 import sys
 
 sys.path.append("../")
@@ -17,7 +19,8 @@ class chamber_eight:
         self.printQuestion(self.acceptable_inputs)
         self.getUserInput(self.acceptable_inputs)
 
-    def printQuestion(self, acceptable_inputs): 
+    def printQuestion(self, acceptable_inputs):
+        self.theCurrentGame.slowPrint("Episode 1: Mid-September")
         self.theCurrentGame.slowPrint(
             "Your common room has been overrun by people not from your hall!"
             )
