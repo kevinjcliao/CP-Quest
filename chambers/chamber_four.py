@@ -7,12 +7,18 @@ class chamber_three:
     def __init__(self, currentGame, currentPlayer): 
         self.gamePlayer = currentPlayer
         self.theCurrentGame = currentGame
-        self.acceptable_inputs = []
+        self.acceptable_inputs = ["Confront their CPs"]
         self.printQuestion(self.acceptable_inputs)
         self.getUserInput(self.acceptable_inputs)
 
     def printQuestion(self, acceptable_inputs): 
-        self.theCurrentGame.slowPrint("FILL IN Scenario")
+        self.theCurrentGame.slowPrint("The workload is really picking up,"+
+        "and the courses are getting really difficult."+ 
+        "Your customs group is located down the hall from another,"+
+        "and every night they play very loud music"+ 
+        "that makes it impossible to study anywhere on the hall."+ 
+        "While you have grown used to the noise, some freshmen express their irritance to you."+
+        "What do you do? ")
         self.theCurrentGame.slowPrint("!")
         self.printAcceptableInputs(acceptable_inputs)
 
