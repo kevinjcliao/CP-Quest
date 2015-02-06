@@ -4,7 +4,7 @@ import sys
 sys.path.append("../")
 
 
-class chamber_three: 
+class chamber_seven: 
     def __init__(self, currentGame, currentPlayer): 
         self.gamePlayer = currentPlayer
         self.theCurrentGame = currentGame
