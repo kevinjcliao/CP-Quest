@@ -20,7 +20,7 @@ class chamber_three:
         self.printQuestion(self.acceptable_inputs)
         self.getUserInput(self.acceptable_inputs)
 
-    def printQuestion(self, acceptable_inputs): 
+     def printQuestion(self, acceptable_inputs): 
         self.theCurrentGame.slowPrint(
             "Seasons change, but old problems do not"+\
             "Final papers are right around the corner,"+\
@@ -31,11 +31,11 @@ class chamber_three:
         self.theCurrentGame.slowPrint("!")
         self.printAcceptableInputs(acceptable_inputs)
         
-    def printAcceptableInputs(self, acceptable_inputs): 
+     def printAcceptableInputs(self, acceptable_inputs): 
         for line in acceptable_inputs: 
             print line
 
-    def getUserInput(self, acceptable_inputs): 
+     def getUserInput(self, acceptable_inputs): 
         input = raw_input("Choose an answer: ")
         
         correctInput = False 

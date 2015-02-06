@@ -14,8 +14,8 @@ class chamber_two:
             "1: Perhaps ask some of their friends to see" +\
                 " if they're alright. ",
             "2: Go out to eat with them"+\
-                "give them a space for them to open up",
-            "3: Hold a PAF session and leave it to them to solve"
+                "give them a space for them to open up.",
+            "3: Hold a PAF session and leave it to them to solve."
             ]
         self.printQuestion(self.acceptable_inputs)
         self.getUserInput(self.acceptable_inputs)
@@ -23,7 +23,7 @@ class chamber_two:
     def printQuestion(self, acceptable_inputs): 
         self.theCurrentGame.slowPrint("Episode 1: Mid-September")
         self.theCurrentGame.slowPrint(
-            "Customs week is over. From getting " +\
+            "Customs week is over. From getting" +\
             " soaked and covered in mud during primal" +\
             " scream, to gaining a bit of emotional intimacy" +\
             " during pluralism, its clear that" +\
@@ -62,23 +62,23 @@ class chamber_two:
                     self.gamePlayer.sanity   += 1
                     self.theCurrentGame.slowPrint(
                         "Good choice! You find out that they are just"+\
-                        "homesick and feeling out of place"+\
+                        " homesick and feeling out of place. "+\
                         "This allows you to better approach them later")
                 elif i==2: 
                     self.theCurrentGame.aura -= 1
                     self.gamePlayer.sanity   += 1
                     self.theCurrentGame.slowPrint(
                         "Good choice! By having an open space,"+\
-                        "They tell you about their homesickness"+\
-                        "And you are able to help them out.")
+                        " they tell you about their homesickness"+\
+                        " and you are able to help them out.")
                 elif i==3:      
                     self.theCurrentGame.aura -= 1
                     self.gamePlayer.sanity   += 1
                     self.theCurrentGame.slowPrint(
-                        "Pushing your dilemas to others is not a good thing"+\
+                        "Pushing your dilemas to others is not a good thing. "+\
                         "Without knowing exactly what to cover in the PAF session,"+\
-                        "the PAF session becomes a waste of time, and the"+\
-                        "freshmen writhdraw more.")
+                        " the PAFs find that holding a session becomes a waste of time, and the"+\
+                        " freshmen writhdraw more.")
                 break
                 
            

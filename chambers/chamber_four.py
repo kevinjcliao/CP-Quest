@@ -10,8 +10,8 @@ class chamber_four:
         self.theCurrentGame = currentGame
         self.acceptable_inputs = [
             "0: Confront their CPs",
-            "1: Go on a tirade in their hall, stomping around and destroying everything"+\
-                "and laying waste to the speakers that play that awful music.",
+            "1: Go on a tirade in their hall. Stomp around and destroy" +\
+                " everything and lay waste to the speakers that play that awful music.",
             "2: Gather your hall to make equal to greater noise in order to annoy the other hall",
             "3: Ignore it"
             ]
