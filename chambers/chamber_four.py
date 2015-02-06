@@ -4,7 +4,7 @@ import sys
 sys.path.append("../")
 
 
-class chamber_three: 
+class chamber_four: 
     def __init__(self, currentGame, currentPlayer): 
         self.gamePlayer = currentPlayer
         self.theCurrentGame = currentGame
@@ -59,7 +59,7 @@ class chamber_three:
                 elif i==1: 
                     self.theCurrentGame.aura -= 1
                     self.gamePlayer.sanity   += 1
-                    self.theCurrentGame.slowPrint("
+                    self.theCurrentGame.slowPrint(
                         "You go on a tirade in their hall and destroy absolutely everything."+\
                         "You have to compensate them for all damages")
                     sys.exit()
@@ -80,7 +80,7 @@ class chamber_three:
                         "You ignore you halls complaints"+\
                         "and as a result the other hall continues to make loud noises"+\
                         "and your hall becomes distraught."
-                
+                        ) 
                 break
   
         if not correctInput:  

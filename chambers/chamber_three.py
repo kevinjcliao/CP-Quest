@@ -68,8 +68,17 @@ class chamber_three:
                 elif i==1: 
                     self.theCurrentGame.aura -= 1
                     self.gamePlayer.sanity   += 1
-                    self.theCurrentGame.slowPrint("Some Answer")
-                    print "I'd put you in the apartments!"
+                    self.theCurrentGame.slowPrint(
+                            "While the freshman definitely reserved the"+\
+                            " right to wear whatever costume he wanted" +\
+                            " for the party by law, the honor code asks" +\
+                            " us to be mindful and respectful of our conduct." +\
+                            " The night of the party, a number of people"+\
+                            " were incredibly upset by his poor choice of" +\
+                            " costume. He was part of an honor council" +\
+                            " proceeding and is working hard to restore" +\
+                            " himself to the community."
+                        ) 
                 elif i==2: 
                     self.theCurrentGame.aura -= 1
                     self.theCurrentGame.honorCodeAwareness +=1
