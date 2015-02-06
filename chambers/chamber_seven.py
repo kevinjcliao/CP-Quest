@@ -49,7 +49,9 @@ class chamber_three:
                     self.theCurrentGame.aura -= 1
                     self.gamePlayer.sanity   += 1
                     self.theCurrentGame.slowPrint(
-                        "Ehh bad choice. Customs incest runs amok")
+                        "Ehh bad choice. Customs incest runs amok."+\
+                        "Leading to your whol hall breaking up.")
+                    sys.exit()
 
 
                 elif i==1: 
@@ -78,7 +80,7 @@ class chamber_three:
                         "contracted something while they were in there"+\
                         "Zombie Dean Martinez informs you that"+\
                         "You are no longer CP of this hall!")
-                
+                    sys.exit()
                 break
   
         if not correctInput:  
