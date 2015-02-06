@@ -14,7 +14,11 @@ class chamber_three:
     def printQuestion(self, acceptable_inputs): 
         self.theCurrentGame.slowPrint("FILL IN Scenario")
         self.theCurrentGame.slowPrint("!")
-        print acceptable_inputs
+        self.printAcceptableInputs(acceptable_inputs)
+
+    def printAcceptableInputs(self, acceptable_inputs): 
+        for line in acceptable_inputs: 
+            print line 
 
     def getUserInput(self, acceptable_inputs): 
         input = raw_input("Choose an answer: ")

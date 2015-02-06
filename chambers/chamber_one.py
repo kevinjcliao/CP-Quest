@@ -8,10 +8,10 @@ class chamber_one:
         self.gamePlayer = currentPlayer
         self.theCurrentGame = currentGame
         self.acceptable_inputs = [
-                "Hearing exactly what's going on next door.", 
-                "Being so far off campus you can never engage in campus life.", 
-                "Getting attacked by bats, mice, and insects.", 
-                "Living in a disgusting wasteland of bodily fluids."
+                "0: Hearing exactly what's going on next door.", 
+                "1: Being so far off campus you can never engage in campus life.", 
+                "2: Getting attacked by bats, mice, and insects.", 
+                "3: Living in a disgusting wasteland of bodily fluids."
             ]
         self.printQuestion(self.acceptable_inputs)
         self.getUserInput(self.acceptable_inputs)
@@ -19,14 +19,22 @@ class chamber_one:
     
     def printQuestion(self, acceptable_inputs): 
         self.theCurrentGame.slowPrint("What kind of hall do you like? ")
-        print acceptable_inputs
+        self.printAcceptableInputs(acceptable_inputs)
+
+    def printAcceptableInputs(self, acceptable_inputs): 
+        for line in acceptable_inputs: 
+            print line 
 
     def getUserInput(self, acceptable_inputs):
         input = raw_input("Choose an answer: ")
-        print "Great! You chose: " + input
+        
+        correctInput = False 
 
         for i in range(0,len(self.acceptable_inputs)): 
-            if input == self.acceptable_inputs[i]: 
+            if int(input) == i:
+                correctInput = True
+                print "Great! You chose: " + input
+                
                 if i==0: 
                     self.gamePlayer.user_hall = "Tritton"
                     print "Tritton Hall sounds like a good fit for you!"
@@ -42,9 +50,9 @@ class chamber_one:
                 
                 break
   
-            else: 
-                print "Error"
-                self.getUserInput(acceptable_inputs)
+        if not correctInput:  
+            print "Error! Perhaps you made a typo somewhere? "
+            self.getUserInput(acceptable_inputs)
 
        
 
