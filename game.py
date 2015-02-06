@@ -10,6 +10,8 @@ import chamber_four
 import chamber_five
 import chamber_six
 import chamber_seven
+import chamber_eight
+import chamber_nine
 
 
 class Game: 
@@ -34,6 +36,10 @@ class Game:
         current_chamber = chamber_six.chamber_six(self, self.gamePlayer)
         self.inBetweenChambers()
         current_chamber = chamber_seven.chamber_seven(self, self.gamePlayer)
+        self.inBetweenChambers()
+        current_chamber = chamber_eight.chamber_eight(self, self.gamePlayer)
+        self.inBetweenChambers()
+        current_chamber = chamber_nine.chamber_nine(self, self.gamePlayer)
 
     def slowPrint(self, s): 
         for c in s + '\n': 

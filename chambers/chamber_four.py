@@ -44,7 +44,7 @@ class chamber_four:
             
             if int(input) == i:
                 correctInput = True
-                print "Great! You chose: " + input
+                print "You chose: " + input
                 
                 if i==0: 
                     self.theCurrentGame.aura -= 1

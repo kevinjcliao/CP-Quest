@@ -29,7 +29,6 @@ class chamber_five:
             "and they have stopped doing homework in general."+\
             "What do you do? ")
 
-        self.theCurrentGame.slowPrint("!")
         self.printAcceptableInputs(acceptable_inputs)
         
     def printAcceptableInputs(self, acceptable_inputs): 
