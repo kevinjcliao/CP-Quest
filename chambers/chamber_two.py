@@ -6,21 +6,26 @@ class chamber_two:
     def __init__(self, currentGame, currentPlayer): 
         self.gamePlayer = currentPlayer
         self.theCurrentGame = currentGame
-        self.acceptable_inputs = ["0: Do nothing. Respect their personal space." +\
+        self.acceptable_inputs = [
+            "0: Do nothing. Respect their personal space." +\
                 " What business do you have poking around when they've told" +\
                 " you to stop?", 
-                "1: Perhaps ask some of their friends to see" +\
-                " if they're alright. "]
+            "1: Perhaps ask some of their friends to see" +\
+                " if they're alright. ",
+            "2: Go out to eat with them"+\
+                "give them a space for them to open up",
+            "3: Hold a PAF session and leave it to them to solve"
+            ]
         self.printQuestion(self.acceptable_inputs)
         self.getUserInput(self.acceptable_inputs)
 
     def printQuestion(self, acceptable_inputs): 
         self.theCurrentGame.slowPrint("Episode 1: Mid-September")
-        self.theCurrentGame.slowPrint("Customs week is over. From getting " + 
-        " soaked and covered in mud during primal" + 
-        " scream, to gaining a bit of emotional intimacy" + 
-        " during pluralism, its clear that" + 
-        " your freshmen had a blast. Now, as the monotony of the semester" +   
+        self.theCurrentGame.slowPrint("Customs week is over. From getting " +\ 
+        " soaked and covered in mud during primal" +\
+        " scream, to gaining a bit of emotional intimacy" +\ 
+        " during pluralism, its clear that" +\
+        " your freshmen had a blast. Now, as the monotony of the semester" +\   
         " begins to sink in, two of your freshmen become withdrawn from most"+\
         " activities. You ask them what's up and they insist they're fine." +\
         " What do you do? ")
@@ -50,14 +55,27 @@ class chamber_two:
                             " visible. Their class attendance drops.")
 
                 elif i==1: 
-                    self.gamePlayer.user_hall = "HCA"
-                    print "I'd put you in the apartments!"
+                    self.theCurrentGame.aura -= 1
+                    self.gamePlayer.sanity   += 1
+                    self.theCurrentGame.slowPrint(
+                        "Good choice! You find out that they are just"+\
+                        "homesick and feeling out of place"+\
+                        "This allows you to better approach them later")
                 elif i==2: 
-                    self.gamePlayer.user_hall = "Barclay"
-                    print "Barclay's your hall!"
+                    self.theCurrentGame.aura -= 1
+                    self.gamePlayer.sanity   += 1
+                    self.theCurrentGame.slowPrint(
+                        "Good choice! By having an open space,"+\
+                        "They tell you about their homesickness"+\
+                        "And you are able to help them out."
                 elif i==3: 
-                    self.gamePlayer.user_hall = "Gunmere"
-                    print "Really?! I'm surprised. Gunmere it is, then!!"
+                    self.theCurrentGame.aura -= 1
+                    self.gamePlayer.sanity   += 1
+                    self.theCurrentGame.slowPrint(
+                        "Pushing your dilemas to others is not a good thing"+\
+                        "Without knowing exactly what to cover in the PAF session,"+\
+                        "the PAF session becomes a waste of time, and the"+\
+                        "freshmen writhdraw more."
                 
                 break
   
