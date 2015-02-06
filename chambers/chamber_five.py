@@ -10,10 +10,10 @@ class chamber_five:
         self.theCurrentGame = currentGame
         self.acceptable_inputs = [
             "0: Implement martial law. Set a curfew"+\
-                "and confine people to their rooms to study.",
+                " and confine people to their rooms to study.",
             "1: Remind people to study, and remind them that"+\
                 " finals are coming, but they can drink and"+\
-                    "party all though winter break.",
+                    " party all though winter break.",
             "2: Do nothing. You have your own finals to worry about.",
             "3: Join them. Drinking is cool,"+\
                 " therefore you drinking with them must make you cool."
@@ -52,17 +52,17 @@ class chamber_five:
                     self.gamePlayer.sanity   += 1
                     self.theCurrentGame.slowPrint(
                         "This causes more stress during finals week,"+\
-                        "and eventually people stop coming back home"+\
-                        "and instead become refugees all around campus.")
+                        " and eventually people stop coming back home"+\
+                        " and instead become refugees all around campus.")
 
 
                 elif i==1: 
                     self.theCurrentGame.aura += 1
                     self.gamePlayer.sanity   += 1
                     self.theCurrentGame.slowPrint(
-                        "Most of your hall follow your plan and begin to study,"+\
-                        "though there are still the group of partiers,"+\
-                        "the majority are now taking finals serious.")
+                        "Most of your hall follows your plan and begin to study,"+\
+                        " though there are still the group of partiers,"+\
+                        " the majority are now taking finals serious.")
 
                 elif i==2: 
                     self.theCurrentGame.aura -= 1
@@ -75,9 +75,9 @@ class chamber_five:
                     self.gamePlayer.sanity   += 1
                     self.theCurrentGame.slowPrint(
                         "Your freshmen get too wasted and many end up failing their finals."+\
-                        "Dean Martinez and President Dan Weiss personally"+\
-                        "escort you from your hall"+\
-                        "Sorry you are no longer CP of this hall"
+                        " Dean Martinez and President Dan Weiss personally"+\
+                        " escort you from your hall."+\
+                        " Sorry. you are no longer CP of this hall"
                     )
                     sys.exit()
                 

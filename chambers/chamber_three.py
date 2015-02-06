@@ -26,12 +26,11 @@ class chamber_three:
                 " out your costume. On the night of Halloween your freshmen" +\
                 " are all costumed, excited and ready to have a blast. You" +\
                 " notice, however, although one of your freshmen" +\
-                "has clearly spent hours on his costume,"+\
+                " has clearly spent hours on his costume,"+\
                 " but it is (probably unintentionally) offensive and racist."+\
                 " What do you do?"
                 )
 
-        self.theCurrentGame.slowPrint("!")
         self.printAcceptableInputs(acceptable_inputs)
 
     def printAcceptableInputs(self, acceptable_inputs): 

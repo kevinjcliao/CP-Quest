@@ -40,6 +40,7 @@ class Game:
         current_chamber = chamber_eight.chamber_eight(self, self.gamePlayer)
         self.inBetweenChambers()
         current_chamber = chamber_nine.chamber_nine(self, self.gamePlayer)
+        self.endGame()
 
     def slowPrint(self, s): 
         for c in s + '\n': 
@@ -48,22 +49,38 @@ class Game:
             time.sleep(0.0005)
         print ""
 
-    def printAcceptableInputs(acceptableInputs): 
-        slowPrint("Current acceptable inputs: ")
-        print acceptableInputs
 
     def inBetweenChambers(self): 
         self.slowPrint("You hold a PAF Session.")
-        if self.aura >= 5: 
+        if self.aura >= 4: 
             self.slowPrint("It is attended by all freshmen.")
         else: 
             self.slowPrint("Attendance is limited...")
 
 
         self.slowPrint("You hold a HCO Session.")
-        if self.aura >= 5: 
+        if self.aura >= 4: 
             self.slowPrint("It is attended by all freshmen.")
             self.honorCodeAwareness+=1
         else: 
             self.slowPrint("Attendance is limited...")
             self.honorCodeAwareness-=1
+
+    def endGame(self): 
+        self.slowPrint("Congratulations! You survived a year as a Customs" +\
+                " Person at Haverford College! It isn't an easy job, but" +\
+                " you made it.")
+        if self.honorCodeAwareness >=3: 
+            self.slowPrint("Your freshmen demonstrated good understanding" +\
+                    " of the honor code through participation in HCO" +\
+                    " discussions."
+                    )
+        else: 
+            self.slowPrint("Your freshmen did not demonstrate good" +\
+                    " understanding of the honor code through" +\
+                    " participation in HCO discussions."
+                    )
+        if self.aura >= 3: 
+            self.slowPrint("Overall, your hall had a good customs experience.")
+        else: 
+            self.slowPrint("Your hall had an awful customs experience.")

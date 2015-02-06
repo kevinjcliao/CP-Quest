@@ -4,31 +4,31 @@ import sys
 sys.path.append("../")
 
 
-class chamber_three: 
+class chamber_nine: 
      def __init__(self, currentGame, currentPlayer): 
         self.gamePlayer = currentPlayer
         self.theCurrentGame = currentGame
         self.acceptable_inputs = [
-            "0:Re-implement martial law. Set a curfew"+\
-                "and confine people to their rooms to study.",
-            "1: Pressure people to work, and remind them that"+\
-                "due dates are coming,"
+            "0: Re-implement martial law. Set a curfew"+\
+                " and confine people to their rooms to study.",
+            "1: Remind people to work, and remind them that"+\
+                " due dates are coming", 
             "2: Do nothing. You have your own papers to worry about.",
             "3: Join them. You didnt do this last time, plus drinking is cool,"+\
-                "therefore you drinking with them must make you cool."
+                " therefore you drinking with them must make you cool."
             ]
         self.printQuestion(self.acceptable_inputs)
         self.getUserInput(self.acceptable_inputs)
 
      def printQuestion(self, acceptable_inputs): 
+        self.theCurrentGame.slowPrint("Episode 8: Finals Week.")         
         self.theCurrentGame.slowPrint(
-            "Seasons change, but old problems do not"+\
-            "Final papers are right around the corner,"+\
-            "but you begin to notice that your freshmen"+\
-            "have not been working on them. Instead all they do is party,"+\
-            "What do you do? ")
+            "Seasons change, but old problems do not."+\
+            " Final papers are right around the corner,"+\
+            " but you begin to notice that your freshmen"+\
+            " have not been working on them. Instead all they do is party."+\
+            " What do you do? ")
 
-        self.theCurrentGame.slowPrint("!")
         self.printAcceptableInputs(acceptable_inputs)
         
      def printAcceptableInputs(self, acceptable_inputs): 
@@ -51,8 +51,8 @@ class chamber_three:
                     self.gamePlayer.sanity   += 1
                     self.theCurrentGame.slowPrint(
                         "This causes more stress during the week,"+\
-                        "and eventually people stop coming back home"+\
-                        "and instead become refugees all around campus.")
+                        " and eventually people stop coming back home"+\
+                        " and instead become refugees all around campus.")
 
 
                 elif i==1: 
@@ -60,8 +60,8 @@ class chamber_three:
                     self.gamePlayer.sanity   += 1
                     self.theCurrentGame.slowPrint(
                         "Most of your hall follow your plan and begin to work,"+\
-                        "though there are still the group of partiers,"+\
-                        "the majority are now taking their work serious.")
+                        " though there are still the group of partiers,"+\
+                        " the majority are now taking their work serious.")
 
                 elif i==2: 
                     self.theCurrentGame.aura -= 1
@@ -74,9 +74,9 @@ class chamber_three:
                     self.gamePlayer.sanity   += 1
                     self.theCurrentGame.slowPrint(
                         "Your freshmen get too wasted and many end up failing their final papers."+\
-                        "Dean Martinez and President Dan Weiss personally"+\
-                        "escort you from your hall"+\
-                        "Sorry you are no longer CP of this hall"
+                        " Dean Martinez and President Dan Weiss personally"+\
+                        " escort you from your hall."+\
+                        " Sorry you are no longer CP of this hall"
                     )
                     sys.exit()
                 
