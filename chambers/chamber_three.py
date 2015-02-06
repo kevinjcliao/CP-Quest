@@ -47,12 +47,23 @@ class chamber_three:
             
             if int(input) == i:
                 correctInput = True
-                print "Great! You chose: " + input
+                print "You chose: " + input + acceptable_inputs[i]
                 
                 if i==0: 
-                    self.theCurrentGame.aura -= 1
-                    self.gamePlayer.sanity   += 1
-                    self.theCurrentGame.slowPrint("")
+                    self.theCurrentGame.aura += 1
+                    self.gamePlayer.sanity   -= 1
+                    self.theCurrentGame.slowPrint(
+                            "You pull the freshman aside and tell him about" +\
+                            " the importance of being tasteful in costume" +\
+                            " choices for Halloween. You also remind him" +\
+                            " of the importance of being mindful of" +\
+                            " Haverford as a community of diverse people." +\
+                            " It's a tough situation and your patience wears" +\
+                            " thin as you explain what you see as basic" +\
+                            " tenets of living in a diverse society, but" +\
+                            " in the end, he benefits immensely from "+\
+                            " this discussion."
+                        )
 
                 elif i==1: 
                     self.theCurrentGame.aura -= 1
@@ -61,8 +72,19 @@ class chamber_three:
                     print "I'd put you in the apartments!"
                 elif i==2: 
                     self.theCurrentGame.aura -= 1
+                    self.theCurrentGame.honorCodeAwareness +=1
                     self.gamePlayer.sanity   += 1
-                    self.theCurrentGame.slowPrint("Some Answer")
+                    self.theCurrentGame.slowPrint(
+                            "While the freshman definitely reserved the"+\
+                            " right to wear whatever costume he wanted" +\
+                            " for the party by law, the honor code asks" +\
+                            " us to be mindful and respectful of our conduct." +\
+                            " The night of the party, a number of people"+\
+                            " were incredibly upset by his poor choice of" +\
+                            " costume. He was part of an honor council" +\
+                            " proceeding and is working hard to restore" +\
+                            " himself to the community."
+                        )
                 elif i==3: 
                     self.theCurrentGame.aura -= 1
                     self.gamePlayer.sanity   += 1
