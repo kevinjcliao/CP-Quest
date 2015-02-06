@@ -12,8 +12,8 @@ class chamber_five:
             "0:Implement martial law. Set a curfew"+\
                 "and confine people to their rooms to study.",
             "1: Pressure people to study, and remind them that"+\
-                "finals are coming and they can drink and"+\
-                    "party all over winter break.",
+                "finals are coming, but they can drink and"+\
+                    "party all though winter break.",
             "2: Do nothing. You have your own finals to worry about.",
             "3: Join them. Drinking is cool,"+\
                 "therefore you drinking with them must make you cool."
@@ -52,11 +52,11 @@ class chamber_five:
 
 
                 elif i==1: 
-                    self.theCurrentGame.aura -= 1
+                    self.theCurrentGame.aura += 1
                     self.gamePlayer.sanity   += 1
                     self.theCurrentGame.slowPrint(
                         "Most of your hall follow your plan and begin to study,"+\
-                        "though there are still the eventual partiers,"+\
+                        "though there are still the group of partiers,"+\
                         "the majority are now taking finals serious.")
 
                 elif i==2: 
