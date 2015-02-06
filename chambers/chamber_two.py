@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import sys
 
 sys.path.append("../")
@@ -21,14 +22,16 @@ class chamber_two:
 
     def printQuestion(self, acceptable_inputs): 
         self.theCurrentGame.slowPrint("Episode 1: Mid-September")
-        self.theCurrentGame.slowPrint("Customs week is over. From getting " +\ 
-        " soaked and covered in mud during primal" +\
-        " scream, to gaining a bit of emotional intimacy" +\ 
-        " during pluralism, its clear that" +\
-        " your freshmen had a blast. Now, as the monotony of the semester" +\   
-        " begins to sink in, two of your freshmen become withdrawn from most"+\
-        " activities. You ask them what's up and they insist they're fine." +\
-        " What do you do? ")
+        self.theCurrentGame.slowPrint(
+            "Customs week is over. From getting " +\
+            " soaked and covered in mud during primal" +\
+            " scream, to gaining a bit of emotional intimacy" +\
+            " during pluralism, its clear that" +\
+            " your freshmen had a blast. Now, as the monotony of the semester" +\
+            " begins to sink in, two of your freshmen become withdrawn from most"+\
+            " activities. You ask them what's up and they insist they're fine." +\
+            " What do you do? "
+        )
         self.printAcceptableInputs(acceptable_inputs)
 
     def printAcceptableInputs(self, acceptable_inputs): 
@@ -67,17 +70,18 @@ class chamber_two:
                     self.theCurrentGame.slowPrint(
                         "Good choice! By having an open space,"+\
                         "They tell you about their homesickness"+\
-                        "And you are able to help them out."
-                elif i==3: 
+                        "And you are able to help them out.")
+                elif i==3:      
                     self.theCurrentGame.aura -= 1
                     self.gamePlayer.sanity   += 1
                     self.theCurrentGame.slowPrint(
                         "Pushing your dilemas to others is not a good thing"+\
                         "Without knowing exactly what to cover in the PAF session,"+\
                         "the PAF session becomes a waste of time, and the"+\
-                        "freshmen writhdraw more."
-                
+                        "freshmen writhdraw more.")
                 break
+                
+           
   
         if not correctInput:  
             print "Error! Perhaps you made a typo somewhere? "
