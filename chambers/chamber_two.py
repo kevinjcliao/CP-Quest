@@ -39,7 +39,7 @@ class chamber_two:
             
             if int(input) == i:
                 correctInput = True
-                print "Great! You chose: " + input
+                print "Great! You chose: " + acceptable_inputs[i]
                 
                 if i==0: 
                     self.theCurrentGame.aura -= 1
