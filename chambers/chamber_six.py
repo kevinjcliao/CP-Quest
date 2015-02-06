@@ -49,7 +49,15 @@ class chamber_three:
                 if i==0: 
                     self.theCurrentGame.aura -= 1
                     self.gamePlayer.sanity   += 1
-                    self.theCurrentGame.slowPrint()
+                    self.theCurrentGame.slowPrint(
+                        "While your decision may have been driven" +\
+                        " by a well-intentioned desire to give them" +\
+                        " personal autonomy, their relationship begins" +\
+                        " to take a negative toll on the customs group."+\
+                        " Individual autonomy is very important, but" +\
+                        " sometimes it's important to intervene when the" +\
+                        " wellbeing of the hall is at stake."
+                        )
 
 
                 elif i==1: 
