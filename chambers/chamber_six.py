@@ -33,7 +33,11 @@ class chamber_six:
                 " were previously in a relationship and just broke" +\
                 " up over break! How do you respond?" 
                 )
-        print acceptable_inputs
+        self.printAcceptableInputs(acceptable_inputs)
+
+    def printAcceptableInputs(self, acceptable_inputs): 
+        for line in acceptable_inputs: 
+            print line
 
     def getUserInput(self, acceptable_inputs): 
         input = raw_input("Choose an answer: ")
@@ -63,7 +67,18 @@ class chamber_six:
                 elif i==1: 
                     self.theCurrentGame.aura -= 1
                     self.gamePlayer.sanity   += 1
-                    self.theCurrentGame.slowPrint("Some Answer")
+                    self.theCurrentGame.slowPrint(
+                            "You decide to hold a movie night in order" +\
+                            " to promote hall cohesion. You set up the" +\
+                            " schedule in such a way that it allows" +\
+                            " both of the former lovers to attend."+\
+                            " Although it's very awkward and tense" +\
+                            " at times, it provides an opportunity" +\
+                            " for them to reintegrate themselves with" +\
+                            " other members of the hall. It wasn't the" +\
+                            " greatest of your hall experiences, but" +\
+                            " your hall is on the path to recovery again."
+                        )
 
                 elif i==2: 
                     self.theCurrentGame.aura -= 1
