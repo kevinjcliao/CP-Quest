@@ -29,7 +29,11 @@ class chamber_five:
             "and they have stopped doing homework in general."+\
             "What do you do? ")
         self.theCurrentGame.slowPrint("!")
-        print acceptable_inputs
+        self.printAcceptableInputs(acceptable_inputs)
+        
+    def printAcceptableInputs(self, acceptable_inputs): 
+        for line in acceptable_inputs: 
+            print line
 
     def getUserInput(self, acceptable_inputs): 
         input = raw_input("Choose an answer: ")
@@ -72,8 +76,7 @@ class chamber_five:
                         "Your freshmen get too wasted and many end up failing their finals."+\
                         "Dean Martinez and President Dan Weiss personally"+\
                         "escort you from your hall"+\
-                        "Sorry you are no longer CP of this hall”
-                        )
+                        "Sorry you are no longer CP of this hall”)
                     sys.exit()
                 
                 break
