@@ -42,7 +42,8 @@ class chamber_two:
                 print "Great! You chose: " + input
                 
                 if i==0: 
-                    self.gamePlayer.user_hall = "Tritton"
+                    self.theCurrentGame.aura -= 1
+                    self.gamePlayer.sanity   += 1
                     self.theCurrentGame.slowPrint("Gradually, the two freshmen become completely" +\
                             " uninvolved in any hall activities. It seems" +\
                             " as if they're always on the hall but never" +\

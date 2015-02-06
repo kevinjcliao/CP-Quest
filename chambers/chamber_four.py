@@ -22,26 +22,38 @@ class chamber_three:
 
     def getUserInput(self, acceptable_inputs): 
         input = raw_input("Choose an answer: ")
-        print "Great! You chose: " + input
         
-        for i in range(0,len(self.acceptable_inputs)): 
+        correctInput = False 
 
-            if input == self.acceptable_inputs[i]: 
+        for i in range(0,len(self.acceptable_inputs)): 
+            
+            if int(input) == i:
+                correctInput = True
+                print "Great! You chose: " + input
+                
                 if i==0: 
-                    self.gamePlayer.user_something = "Fill in Answer"
-                    print "response"
+                    self.theCurrentGame.aura -= 1
+                    self.gamePlayer.sanity   += 1
+                    self.theCurrentGame.slowPrint("Some Answer")
+
+
                 elif i==1: 
-                    self.gamePlayer.user_something = "Fill in Answer"
-                    print "response"
+                    self.theCurrentGame.aura -= 1
+                    self.gamePlayer.sanity   += 1
+                    self.theCurrentGame.slowPrint("Some Answer")
+
                 elif i==2: 
-                    self.gamePlayer.user_something = "Fill in Answer"
-                    print "response"
+                    self.theCurrentGame.aura -= 1
+                    self.gamePlayer.sanity   += 1
+                    self.theCurrentGame.slowPrint("Some Answer")
+
                 elif i==3: 
-                    self.gamePlayer.user_something = "Fill in Answer"
-                    print "response"
-                    
+                    self.theCurrentGame.aura -= 1
+                    self.gamePlayer.sanity   += 1
+                    self.theCurrentGame.slowPrint("Some Answer")
+                
                 break
   
-            else: 
-                print "Error"
-                self.getUserInput(acceptable_inputs)
+        if not correctInput:  
+            print "Error! Perhaps you made a typo somewhere? "
+            self.getUserInput(acceptable_inputs)

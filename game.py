@@ -25,7 +25,7 @@ class Game:
         for c in s + '\n': 
             sys.stdout.write(c)
             sys.stdout.flush()
-            time.sleep(0.0005)
+            time.sleep(0.05)
         print ""
 
     def printAcceptableInputs(acceptableInputs): 
