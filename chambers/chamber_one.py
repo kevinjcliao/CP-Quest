@@ -15,7 +15,7 @@ class chamber_one:
             ]
         self.printQuestion(self.acceptable_inputs)
         self.getUserInput(self.acceptable_inputs)
-        
+        self.theCurrentGame.slowPrint("Alright then... Let's get started...")        
     
     def printQuestion(self, acceptable_inputs): 
         self.theCurrentGame.slowPrint("What kind of hall do you like? ")

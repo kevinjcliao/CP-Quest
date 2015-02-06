@@ -4,7 +4,7 @@ import time
 
 sys.path.append('chambers/')
 import chamber_one
-
+import chamber_two
 
 class Game: 
     def __init__(self, player): 
@@ -13,6 +13,7 @@ class Game:
     def run(self): 
         self.slowPrint("Let's get started...")
         current_chamber = chamber_one.chamber_one(self, self.gamePlayer)
+        current_chamber = chamber_two.chamber_two(self, self.gamePlayer)
 
     def slowPrint(self, s): 
         for c in s + '\n': 
