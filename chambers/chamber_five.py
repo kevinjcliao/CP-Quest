@@ -77,7 +77,8 @@ class chamber_five:
                         "Your freshmen get too wasted and many end up failing their finals."+\
                         "Dean Martinez and President Dan Weiss personally"+\
                         "escort you from your hall"+\
-                        "Sorry you are no longer CP of this hall”)
+                        "Sorry you are no longer CP of this hall"
+                    )
                     sys.exit()
                 
                 break
