@@ -8,7 +8,13 @@ class chamber_three:
     def __init__(self, currentGame, currentPlayer): 
         self.gamePlayer = currentPlayer
         self.theCurrentGame = currentGame
-        self.acceptable_inputs = []
+        self.acceptable_inputs = [
+                "0: Pull him aside respectfully and confront him in private.", 
+                "1: In the middle of the photo, point at his costume, bounce" +\
+                        " up and down and yell 'NO. NO. NO. NO. NO.", 
+                "2: Ignore the problem. There is no problem.", 
+                "3: Match the outfit to make sure they don't feel out of place."
+                ]
         self.printQuestion(self.acceptable_inputs)
         self.getUserInput(self.acceptable_inputs)
 
@@ -46,7 +52,7 @@ class chamber_three:
                 if i==0: 
                     self.theCurrentGame.aura -= 1
                     self.gamePlayer.sanity   += 1
-                    self.theCurrentGame.slowPrint("Some Answer")
+                    self.theCurrentGame.slowPrint("")
 
                 elif i==1: 
                     self.theCurrentGame.aura -= 1
@@ -60,8 +66,10 @@ class chamber_three:
                 elif i==3: 
                     self.theCurrentGame.aura -= 1
                     self.gamePlayer.sanity   += 1
-                    self.theCurrentGame.slowPrint("Some Answer")
-                
+                    self.theCurrentGame.slowPrint("Unbelievable. You are " +\
+                            " no longer the CP of this hall. ")
+                    sys.exit()
+                    
                 break
   
         if not correctInput:  
